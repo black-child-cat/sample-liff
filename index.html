@@ -31,11 +31,12 @@
         各項目を選択して「作成する」ボタンを押したら日記の例文が生成されるよ！（という想定）
       </p>
       <div class="mb-3">
-        <label for="sample" class="form-label fw-bold">源氏名</label>
+        <label for="name" class="form-label fw-bold">源氏名</label>
         <input
           type="text"
           class="form-control"
-          id="sample"
+          id="name"
+          name="name"
           aria-describedby="emailHelp"
         />
         <div id="emailHelp" class="form-text text-muted small">
@@ -86,20 +87,6 @@
             自己紹介
           </button>
         </li>
-        <li class="nav-item" role="presentation">
-          <button
-            class="nav-link"
-            id="pills-04-tab"
-            data-bs-toggle="pill"
-            data-bs-target="#pills-04"
-            type="button"
-            role="tab"
-            aria-controls="pills-04"
-            aria-selected="false"
-          >
-            その他
-          </button>
-        </li>
       </ul>
       <div class="tab-content" id="pills-tabContent">
         <div
@@ -109,18 +96,17 @@
           aria-labelledby="pills-01-tab"
         >
           <div class="mb-3">
-            <label for="sample" class="form-label fw-bold">相手の名前</label>
+            <label for="customer" class="form-label fw-bold">相手の名前</label>
             <input
               type="text"
               class="form-control"
-              id="sample"
+              id="customer"
+              name="customer"
               aria-describedby="emailHelp"
               placeholder="例）タナカ"
             />
             <div id="emailHelp" class="form-text text-muted">
-              <span class="small"
-                >貴女の源氏名を入力してね。文章の一人称に利用するよ。</span
-              >
+              <span class="small">お礼日記を送りたい相手を教えてね。</span>
             </div>
           </div>
           <hr class="bg-light" />
@@ -131,7 +117,8 @@
             <textarea
               class="form-control"
               id="exampleFormControlTextarea1"
-              rows="3"
+              rows="4"
+              name="detail"
               placeholder="例）最近話題の○○の話をして盛り上がった。"
             ></textarea>
           </div>
@@ -152,21 +139,19 @@
         >
           ...
         </div>
-        <div
-          class="tab-pane fade pt-3"
-          id="pills-04"
-          role="tabpanel"
-          aria-labelledby="pills-04-tab"
-        >
-          ...
-        </div>
       </div>
       <hr class="bg-light" />
-      <input
-        type="submit"
-        class="mt-4 btn btn-lg btn-dark w-100 fw-bold"
-        value="日記を作成する"
-      />
+      <div
+        class="row bg-white position-sticky bottom-0 start-0 border-top border-light"
+      >
+        <div class="container py-1">
+          <input
+            type="submit"
+            class="my-2 btn btn-lg btn-dark w-100 fw-bold"
+            value="日記を作成する"
+          />
+        </div>
+      </div>
     </form>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
